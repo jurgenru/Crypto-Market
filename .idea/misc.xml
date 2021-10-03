@@ -7,8 +7,9 @@
         <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/activity_news.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_feed.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_news.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_news.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_item_news.xml" value="0.25" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.25" />
       </map>
     </option>
