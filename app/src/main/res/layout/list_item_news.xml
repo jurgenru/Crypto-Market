@@ -36,6 +36,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
         android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/ivImage"
         app:layout_constraintStart_toEndOf="@+id/tvPostLastNews"
         tools:text="Por andrea nuñez" />
