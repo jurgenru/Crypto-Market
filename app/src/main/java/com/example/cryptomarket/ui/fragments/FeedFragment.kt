@@ -9,8 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cryptomarket.R
 import com.example.cryptomarket.data.FeedDataSource
-import com.example.cryptomarket.data.NewsDataSource
-import com.example.cryptomarket.ui.adapters.NewsListAdapter
 import com.example.cryptomarket.ui.adapters.CoinListAdapter
 
 
