@@ -6,14 +6,14 @@ import com.example.cryptomarket.R
 import com.example.cryptomarket.replaceFragment
 import com.example.cryptomarket.ui.fragments.FeedFragment
 import com.example.cryptomarket.ui.fragments.NewsFragment
-import com.example.cryptomarket.ui.fragments.ProfileFragment
+import com.example.cryptomarket.ui.fragments.WalletFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainMenuActivity : AppCompatActivity() {
 
     private lateinit var bottomNavigationView: BottomNavigationView
 
-    private val profileFragment = ProfileFragment()
+    private val walletFragment = WalletFragment()
     private val feedFragment = FeedFragment()
     private val newsFragment = NewsFragment()
 
@@ -25,7 +25,7 @@ class MainMenuActivity : AppCompatActivity() {
         bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.menuItemProfile -> {
-                    replaceFragment(R.id.container, profileFragment)
+                    replaceFragment(R.id.container, walletFragment)
                 }
                 R.id.menuItemFeed -> {
                     replaceFragment(R.id.container, feedFragment)
