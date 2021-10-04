@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Crypto Market</string>
+    <string name="news">News Activity</string>
+    <string name="menuItemProfileLabel">Profile</string>
+    <string name="menuItemFeedLabel">Home</string>
+    <string name="menuItemNewsLabel">News</string>
 </resources>
