@@ -11,11 +11,12 @@
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1503623188405797" />
         <entry key="app/src/main/res/layout/fragment_trade.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_trades.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/fragment_trend.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_trend.xml" value="0.33" />
         <entry key="app/src/main/res/layout/list_item_feed.xml" value="0.22572553848651808" />
         <entry key="app/src/main/res/layout/list_item_news.xml" value="0.25" />
         <entry key="app/src/main/res/layout/list_item_trade.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/list_item_trades.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/list_item_trends.xml" value="0.33" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.19322916666666667" />
       </map>
     </option>

@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.cryptomarket.R
 import com.example.cryptomarket.replaceFragment
-import com.example.cryptomarket.ui.fragments.FeedFragment
-import com.example.cryptomarket.ui.fragments.NewsFragment
-import com.example.cryptomarket.ui.fragments.TradeFragment
-import com.example.cryptomarket.ui.fragments.WalletFragment
+import com.example.cryptomarket.ui.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainMenuActivity : AppCompatActivity() {
@@ -18,6 +15,7 @@ class MainMenuActivity : AppCompatActivity() {
     private val feedFragment = FeedFragment()
     private val newsFragment = NewsFragment()
     private val tradeFragment = TradeFragment()
+    private val trendFragment = TrendFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +31,7 @@ class MainMenuActivity : AppCompatActivity() {
                     replaceFragment(R.id.container, feedFragment)
                 }
                 R.id.menuItemNews -> {
-                    replaceFragment(R.id.container, tradeFragment)
+                    replaceFragment(R.id.container, trendFragment)
                 }
             }
             true

@@ -5,4 +5,9 @@
     <string name="menuItemProfileLabel">Perfil</string>
     <string name="menuItemFeedLabel">Home</string>
     <string name="menuItemNewsLabel">Noticias</string>
+    <string name="market_Trends">Tendencias de mercado</string>
+    <string name="name">Nombre</string>
+    <string name="lastPrice">Último Precio</string>
+    <string name="lastChanges">Cambios en 24h</string>
+    <string name="market">Mercados</string>
 </resources>
