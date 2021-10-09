@@ -27,7 +27,7 @@ class TradeFragment: Fragment() {
         val recyclerView = view.findViewById<RecyclerView>(R.id.rvTrades)
         recyclerView.adapter = tradeListAdapter
 
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
         tradeListAdapter.addAll(TradeDataSource.tradeList)
     }
