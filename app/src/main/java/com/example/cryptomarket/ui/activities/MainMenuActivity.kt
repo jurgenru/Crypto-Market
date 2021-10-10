@@ -16,6 +16,7 @@ class MainMenuActivity : AppCompatActivity() {
     private val newsFragment = NewsFragment()
     private val tradeFragment = TradeFragment()
     private val trendFragment = TrendFragment()
+    private val nttsFragment = NttsFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +32,7 @@ class MainMenuActivity : AppCompatActivity() {
                     replaceFragment(R.id.container, feedFragment)
                 }
                 R.id.menuItemNews -> {
-                    replaceFragment(R.id.container, trendFragment)
+                    replaceFragment(R.id.container, nttsFragment)
                 }
             }
             true
