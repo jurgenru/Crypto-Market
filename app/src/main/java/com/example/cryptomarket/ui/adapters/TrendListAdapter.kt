@@ -54,7 +54,7 @@ class TrendListViewHolder(val itemView: View): RecyclerView.ViewHolder(itemView)
         coinName.text = trend.name
         coinDesc.text = trend.desc
         coinVal.text = "${trend.lastPrice} $"
-        changeVal.text = "${trend.changes} $"
+        changeVal.text = "${trend.changes} %"
         Glide.with(itemView)
             .load(trend.markets)
             .transform(CenterCrop(), RoundedCorners(24))
