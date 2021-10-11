@@ -4,4 +4,9 @@
     <string name="menuItemProfileLabel">Profile</string>
     <string name="menuItemFeedLabel">Home</string>
     <string name="menuItemNewsLabel">News</string>
+    <string name="market_Trends">Market Trends</string>
+    <string name="name">Name</string>
+    <string name="lastPrice">Last Price</string>
+    <string name="lastChanges">Last 24h Changes</string>
+    <string name="market">Markets</string>
 </resources>
