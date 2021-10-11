@@ -7,6 +7,6 @@
     <string name="market_Trends">Market Trends</string>
     <string name="name">Name</string>
     <string name="lastPrice">Last Price</string>
-    <string name="lastChanges">Last 24h Changes</string>
+    <string name="lastChanges">Changes</string>
     <string name="market">Markets</string>
 </resources>
