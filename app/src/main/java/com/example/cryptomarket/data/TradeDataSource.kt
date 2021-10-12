@@ -12,31 +12,31 @@ object TradeDataSource {
             pricePercentage = 1521.12
         ),
         Trade(
-            acronym = "BTN",
+            acronym = "HRC",
             price = 1521.0,
             percentage = 12.0,
             pricePercentage = 1521.12
         ),
         Trade(
-            acronym = "BTN",
+            acronym = "OBJ",
             price = 1521.0,
             percentage = 12.0,
             pricePercentage = 1521.12
         ),
         Trade(
-            acronym = "BTN",
+            acronym = "NTF",
             price = 1521.0,
             percentage = 12.0,
             pricePercentage = 1521.12
         ),
         Trade(
-            acronym = "BTN",
+            acronym = "WPP",
             price = 1521.0,
             percentage = 12.0,
             pricePercentage = 1521.12
         ),
         Trade(
-            acronym = "BTN",
+            acronym = "FCB",
             price = 1521.0,
             percentage = 12.0,
             pricePercentage = 1521.12
