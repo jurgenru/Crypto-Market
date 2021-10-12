@@ -12,7 +12,7 @@ import com.example.cryptomarket.R
 import com.example.cryptomarket.data.TradeDataSource
 import com.example.cryptomarket.ui.adapters.TradesListAdapter
 
-class TradeFragment: Fragment() {
+class TradeFragment : Fragment() {
     private val tradeListAdapter = TradesListAdapter()
 
     override fun onCreateView(
@@ -27,7 +27,8 @@ class TradeFragment: Fragment() {
         val recyclerView = view.findViewById<RecyclerView>(R.id.rvTrades)
         recyclerView.adapter = tradeListAdapter
 
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager =
+            GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
 
         tradeListAdapter.addAll(TradeDataSource.tradeList)
     }
