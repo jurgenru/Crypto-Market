@@ -10,15 +10,21 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.cryptomarket.R
+import com.example.cryptomarket.interfaces.OnNewsItemClickListener
 import com.example.cryptomarket.model.Post
 
 class NewsListAdapter: RecyclerView.Adapter<NewsListViewHolder>() {
-    val elementList: MutableList<Post> = mutableListOf()
+    private val elementList: MutableList<Post> = mutableListOf()
+    private var onNewsItemClickListener: ((post: Post) -> Unit)? = null
 
     fun addAll(newElementList: List<Post>) {
         elementList.clear()
         elementList.addAll(newElementList)
         notifyDataSetChanged()
+    }
+
+    fun setOnNewsItemClickListener(onNewsItemClickListener: ((post: Post) -> Unit)?){
+        this.onNewsItemClickListener = onNewsItemClickListener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsListViewHolder {
@@ -28,6 +34,9 @@ class NewsListAdapter: RecyclerView.Adapter<NewsListViewHolder>() {
 
     override fun onBindViewHolder(holder: NewsListViewHolder, position: Int) {
         holder.bind(elementList[position])
+        holder.itemView.setOnClickListener{
+            onNewsItemClickListener?.invoke(elementList[position])
+        }
     }
 
     override fun getItemCount(): Int {
@@ -36,7 +45,7 @@ class NewsListAdapter: RecyclerView.Adapter<NewsListViewHolder>() {
 
 }
 
-class NewsListViewHolder(val itemView: View): RecyclerView.ViewHolder(itemView){
+class NewsListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     private val ivImage = itemView.findViewById<ImageView>(R.id.ivImage)
     private val tvPostLastNews = itemView.findViewById<TextView>(R.id.tvPostLastNews)
     private val tvPostPublisher = itemView.findViewById<TextView>(R.id.tvPostPublisher)
