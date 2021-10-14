@@ -19,7 +19,7 @@
         <entry key="app/src/main/res/layout/list_item_news.xml" value="0.25" />
         <entry key="app/src/main/res/layout/list_item_trade.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/list_item_trades.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/list_item_trends.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/list_item_trends.xml" value="0.1" />
         <entry key="app/src/main/res/menu/main_menu.xml" value="0.1" />
       </map>
     </option>
