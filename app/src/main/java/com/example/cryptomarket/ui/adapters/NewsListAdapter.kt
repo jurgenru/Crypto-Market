@@ -10,10 +10,12 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.cryptomarket.R
+import com.example.cryptomarket.databinding.ListItemFeedBinding
+import com.example.cryptomarket.databinding.ListItemNewsBinding
 import com.example.cryptomarket.interfaces.OnNewsItemClickListener
 import com.example.cryptomarket.model.Post
 
-class NewsListAdapter: RecyclerView.Adapter<NewsListViewHolder>() {
+class NewsListAdapter : RecyclerView.Adapter<NewsListViewHolder>() {
     private val elementList: MutableList<Post> = mutableListOf()
     private var onNewsItemClickListener: ((post: Post) -> Unit)? = null
 
@@ -23,18 +25,19 @@ class NewsListAdapter: RecyclerView.Adapter<NewsListViewHolder>() {
         notifyDataSetChanged()
     }
 
-    fun setOnNewsItemClickListener(onNewsItemClickListener: ((post: Post) -> Unit)?){
+    fun setOnNewsItemClickListener(onNewsItemClickListener: ((post: Post) -> Unit)?) {
         this.onNewsItemClickListener = onNewsItemClickListener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsListViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_news, parent, false)
-        return NewsListViewHolder(view)
+        val binding =
+            ListItemNewsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return NewsListViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: NewsListViewHolder, position: Int) {
         holder.bind(elementList[position])
-        holder.itemView.setOnClickListener{
+        holder.binding.root.setOnClickListener {
             onNewsItemClickListener?.invoke(elementList[position])
         }
     }
@@ -45,19 +48,14 @@ class NewsListAdapter: RecyclerView.Adapter<NewsListViewHolder>() {
 
 }
 
-class NewsListViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-    private val ivImage = itemView.findViewById<ImageView>(R.id.ivImage)
-    private val tvPostLastNews = itemView.findViewById<TextView>(R.id.tvPostLastNews)
-    private val tvPostPublisher = itemView.findViewById<TextView>(R.id.tvPostPublisher)
-    private val tvPostTime = itemView.findViewById<TextView>(R.id.tvPostTime)
-
-    fun bind(post: Post){
+class NewsListViewHolder(val binding: ListItemNewsBinding) : RecyclerView.ViewHolder(binding.root) {
+    fun bind(post: Post) {
         Glide.with(itemView)
             .load(post.imageUrl)
             .transform(CenterCrop(), RoundedCorners(24))
-            .into(ivImage)
-        tvPostLastNews.text = "Última hora"
-        tvPostPublisher.text = post.publisher
-        tvPostTime.text = "${post.time} min"
+            .into(binding.ivImage)
+        binding.tvPostLastNews.text = "Última hora"
+        binding.tvPostPublisher.text = post.publisher
+        binding.tvPostTime.text = "${post.time} min"
     }
 }

@@ -5,46 +5,26 @@ import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.cryptomarket.R
+import com.example.cryptomarket.databinding.ActivityMainMenuBinding
 import com.example.cryptomarket.replaceFragment
 import com.example.cryptomarket.ui.fragments.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainMenuActivity : AppCompatActivity() {
 
-    private lateinit var bottomNavigationView: BottomNavigationView
-
-    private val walletFragment = WalletFragment()
-    private val feedFragment = FeedFragment()
-    private val newsFragment = NewsFragment()
-    private val tradeFragment = TradeFragment()
-    private val trendFragment = TrendFragment()
-    private val nttsFragment = NttsFragment()
+    private lateinit var binding: ActivityMainMenuBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_menu)
-        bottomNavigationView = findViewById(R.id.bottomNavigationView)
+        binding = ActivityMainMenuBinding.inflate(layoutInflater)
 
-        val navHost = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
+        setContentView(binding.root)
+
+        val navHost =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
         val navController = navHost.navController
 
-        bottomNavigationView.setupWithNavController(navController)
+        binding.bottomNavigationView.setupWithNavController(navController)
 
-//        bottomNavigationView.setOnItemSelectedListener {
-//            when(it.itemId){
-//                R.id.menuItemProfile -> {
-//                    replaceFragment(R.id.container, walletFragment)
-//                }
-//                R.id.menuItemFeed -> {
-//                    replaceFragment(R.id.container, feedFragment)
-//                }
-//                R.id.menuItemNews -> {
-//                    replaceFragment(R.id.container, nttsFragment)
-//                }
-//            }
-//            true
-//        }
-//
-//        bottomNavigationView.selectedItemId = R.id.menuItemFeed
     }
 }
