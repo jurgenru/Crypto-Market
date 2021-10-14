@@ -10,9 +10,10 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.cryptomarket.R
+import com.example.cryptomarket.databinding.ListItemTrendsBinding
 import com.example.cryptomarket.model.Trend
 
-class TrendListAdapter:RecyclerView.Adapter<TrendListViewHolder>(){
+class TrendListAdapter : RecyclerView.Adapter<TrendListViewHolder>() {
     val elementList: MutableList<Trend> = mutableListOf()
 
     fun addAll(newElementList: MutableList<Trend>) {
@@ -22,8 +23,9 @@ class TrendListAdapter:RecyclerView.Adapter<TrendListViewHolder>(){
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrendListViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_trends, parent, false)
-        return TrendListViewHolder(view)
+        val binding =
+            ListItemTrendsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return TrendListViewHolder(binding)
     }
 
 
@@ -38,26 +40,20 @@ class TrendListAdapter:RecyclerView.Adapter<TrendListViewHolder>(){
     }
 }
 
-class TrendListViewHolder(val itemView: View): RecyclerView.ViewHolder(itemView) {
-    private val logo = itemView.findViewById<ImageView>(R.id.coinlogo)
-    private val coinName = itemView.findViewById<TextView>(R.id.coinname)
-    private val coinDesc = itemView.findViewById<TextView>(R.id.coinshort)
-    private val coinVal = itemView.findViewById<TextView>(R.id.tvLastPrice)
-    private val changeVal = itemView.findViewById<TextView>(R.id.tvChangePrice)
-    private val market = itemView.findViewById<ImageView>(R.id.ivMarket)
-
+class TrendListViewHolder(val binding: ListItemTrendsBinding) :
+    RecyclerView.ViewHolder(binding.root) {
     fun bind(trend: Trend) {
         Glide.with(itemView)
             .load(trend.icon)
             .transform(CenterCrop(), RoundedCorners(24))
-            .into(logo)
-        coinName.text = trend.name
-        coinDesc.text = trend.desc
-        coinVal.text = "${trend.lastPrice} $"
-        changeVal.text = "${trend.changes} %"
+            .into(binding.coinlogo)
+        binding.coinname.text = trend.name
+        binding.coinshort.text = trend.desc
+        binding.tvLastPrice.text = "${trend.lastPrice} $"
+        binding.tvChangePrice.text = "${trend.changes} %"
         Glide.with(itemView)
             .load(trend.markets)
             .transform(CenterCrop(), RoundedCorners(24))
-            .into(market)
+            .into(binding.ivMarket)
     }
 }
