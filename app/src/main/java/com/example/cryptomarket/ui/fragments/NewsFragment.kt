@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -35,10 +36,8 @@ class NewsFragment: Fragment() {
         newsListAdapter.addAll(NewsDataSource.postList)
 
         newsListAdapter.setOnNewsItemClickListener{
-            val ft = parentFragmentManager.beginTransaction()
-            ft.add(R.id.container, PostNewsDetailsFragment())
-            ft.addToBackStack("Test")
-            ft.commit()
+            val directions = NttsFragmentDirections.actionGoToNewsDetails(it)
+            findNavController().navigate(directions)
         }
     }
 }

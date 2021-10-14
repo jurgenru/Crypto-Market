@@ -2,6 +2,8 @@ package com.example.cryptomarket.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.example.cryptomarket.R
 import com.example.cryptomarket.replaceFragment
 import com.example.cryptomarket.ui.fragments.*
@@ -21,23 +23,28 @@ class MainMenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_menu)
-
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
-        bottomNavigationView.setOnItemSelectedListener {
-            when(it.itemId){
-                R.id.menuItemProfile -> {
-                    replaceFragment(R.id.container, walletFragment)
-                }
-                R.id.menuItemFeed -> {
-                    replaceFragment(R.id.container, feedFragment)
-                }
-                R.id.menuItemNews -> {
-                    replaceFragment(R.id.container, nttsFragment)
-                }
-            }
-            true
-        }
 
-        bottomNavigationView.selectedItemId = R.id.menuItemFeed
+        val navHost = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
+        val navController = navHost.navController
+
+        bottomNavigationView.setupWithNavController(navController)
+
+//        bottomNavigationView.setOnItemSelectedListener {
+//            when(it.itemId){
+//                R.id.menuItemProfile -> {
+//                    replaceFragment(R.id.container, walletFragment)
+//                }
+//                R.id.menuItemFeed -> {
+//                    replaceFragment(R.id.container, feedFragment)
+//                }
+//                R.id.menuItemNews -> {
+//                    replaceFragment(R.id.container, nttsFragment)
+//                }
+//            }
+//            true
+//        }
+//
+//        bottomNavigationView.selectedItemId = R.id.menuItemFeed
     }
 }

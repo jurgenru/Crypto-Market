@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menuItemProfile"
+        android:id="@+id/walletFragment"
         android:icon="@drawable/icons8_test_account_90"
         android:title="@string/menuItemProfileLabel" />
     <item
-        android:id="@+id/menuItemFeed"
+        android:id="@+id/feedFragment2"
         android:icon="@drawable/icons8_bitcoin_480"
         android:title="@string/menuItemFeedLabel" />
     <item
-        android:id="@+id/menuItemNews"
+        android:id="@+id/nttsFragment"
         android:icon="@drawable/icons8_news_384"
         android:title="@string/menuItemNewsLabel" />
 </menu>

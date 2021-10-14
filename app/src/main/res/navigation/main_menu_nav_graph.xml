@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_menu_nav_graph"
+    app:startDestination="@id/nttsFragment">
+    <fragment
+        android:id="@+id/nttsFragment"
+        android:name="com.example.cryptomarket.ui.fragments.NttsFragment"
+        android:label="NttsFragment"
+        tools:layout = "@layout/fragment_ntt">
+        <action
+            android:id="@+id/action_go_to_news_details"
+            app:destination="@id/postNewsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postNewsDetailsFragment"
+        android:name="com.example.cryptomarket.ui.fragments.PostNewsDetailsFragment"
+        android:label="PostNewsDetailsFragment"
+        tools:layout="@layout/fragment_news_details">
+        <argument
+            android:name="post"
+            app:argType="com.example.cryptomarket.model.Post" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedFragment2"
+        android:name="com.example.cryptomarket.ui.fragments.FeedFragment"
+        android:label="FeedFragment"
+        tools:layout = "@layout/fragment_feed"/>
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.example.cryptomarket.ui.fragments.WalletFragment"
+        android:label="WalletFragment"
+        tools:layout = "@layout/fragment_wallet"/>
+</navigation>

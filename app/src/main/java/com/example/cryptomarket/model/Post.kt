@@ -1,3 +1,11 @@
 package com.example.cryptomarket.model
 
-data class Post(val publisher:String, val time: Long, val imageUrl: String)
+import java.io.Serializable
+
+data class Post(
+    val publisher: String,
+    val time: Long,
+    val imageUrl: String,
+    val description: String,
+    val full: String
+) : Serializable
