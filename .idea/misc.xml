@@ -3,24 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.1503623188405797" />
-        <entry key="app/src/main/res/layout/activity_news.xml" value="0.1503623188405797" />
-        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/fragment_feed.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_news.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_news_details.xml" value="0.18478260869565216" />
-        <entry key="app/src/main/res/layout/fragment_ntt.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.1503623188405797" />
-        <entry key="app/src/main/res/layout/fragment_trade.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/fragment_trades.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/fragment_trend.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/list_item_feed.xml" value="0.22572553848651808" />
-        <entry key="app/src/main/res/layout/list_item_news.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/list_item_trade.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/list_item_trades.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/list_item_trends.xml" value="0.1" />
-        <entry key="app/src/main/res/menu/main_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/activity_news.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/fragment_coin_details.xml" value="0.3352523505851829" />
+        <entry key="app/src/main/res/layout/fragment_deposit.xml" value="0.2546875" />
+        <entry key="app/src/main/res/layout/fragment_feed.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/fragment_news.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/fragment_news_details.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/fragment_ntt.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/fragment_trades.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/fragment_trend.xml" value="0.1449087259517961" />
+        <entry key="app/src/main/res/layout/list_item_feed.xml" value="0.13072916666666667" />
+        <entry key="app/src/main/res/layout/list_item_news.xml" value="0.13072916666666667" />
       </map>
     </option>
   </component>
