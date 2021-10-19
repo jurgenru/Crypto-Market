@@ -1,4 +1,4 @@
-package com.example.cryptomarket.interfaces
+package com.example.cryptomarket.model.interfaces
 
 import com.example.cryptomarket.model.Post
 

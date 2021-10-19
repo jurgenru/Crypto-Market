@@ -1,8 +1,9 @@
-package com.example.cryptomarket.ui.activities
+package com.example.cryptomarket.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.cryptomarket.R
+import com.example.cryptomarket.ui.mainmenu.tabs.news.NewsActivity
 
 class MainActivity : AppCompatActivity() {
     val newsActivity = NewsActivity()

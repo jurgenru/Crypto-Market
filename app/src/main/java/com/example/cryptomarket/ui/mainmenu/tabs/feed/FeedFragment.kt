@@ -1,4 +1,4 @@
-package com.example.cryptomarket.ui.fragments
+package com.example.cryptomarket.ui.mainmenu.tabs.feed
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cryptomarket.R
 import com.example.cryptomarket.data.FeedDataSource
-import com.example.cryptomarket.ui.adapters.CoinListAdapter
-
 
 class FeedFragment: Fragment() {
     private val coinListAdapter = CoinListAdapter()

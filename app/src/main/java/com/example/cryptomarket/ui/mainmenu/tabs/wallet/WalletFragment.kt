@@ -1,4 +1,4 @@
-package com.example.cryptomarket.ui.fragments
+package com.example.cryptomarket.ui.mainmenu.tabs.wallet
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,14 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.cryptomarket.R
 
-class NttsFragment: Fragment() {
+class WalletFragment: Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_ntt, container, false)
+        return inflater.inflate(R.layout.fragment_wallet, container, false)
     }
-
 }

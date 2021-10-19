@@ -8,7 +8,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.example.cryptomarket.ui.fragments.NewsFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.news.fragments.NewsFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
@@ -25,7 +25,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView2"
-        android:name="com.example.cryptomarket.ui.fragments.TradeFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.news.fragments.TradeFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
@@ -42,7 +42,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView3"
-        android:name="com.example.cryptomarket.ui.fragments.TrendFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.news.fragments.TrendFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

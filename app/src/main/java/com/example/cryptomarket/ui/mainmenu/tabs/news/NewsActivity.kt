@@ -1,10 +1,9 @@
-package com.example.cryptomarket.ui.activities
+package com.example.cryptomarket.ui.mainmenu.tabs.news
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cryptomarket.R
-import com.example.cryptomarket.ui.fragments.NewsFragment
+import com.example.cryptomarket.ui.mainmenu.tabs.news.fragments.NewsFragment
 
 class NewsActivity: AppCompatActivity() {
     val newsFragment = NewsFragment()

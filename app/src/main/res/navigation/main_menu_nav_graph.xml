@@ -6,7 +6,7 @@
     app:startDestination="@id/nttsFragment">
     <fragment
         android:id="@+id/nttsFragment"
-        android:name="com.example.cryptomarket.ui.fragments.NttsFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.news.NttsFragment"
         android:label="NttsFragment"
         tools:layout = "@layout/fragment_ntt">
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/postNewsDetailsFragment"
-        android:name="com.example.cryptomarket.ui.fragments.PostNewsDetailsFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.news.details.PostNewsDetailsFragment"
         android:label="PostNewsDetailsFragment"
         tools:layout="@layout/fragment_news_details">
         <argument
@@ -24,12 +24,12 @@
     </fragment>
     <fragment
         android:id="@+id/feedFragment2"
-        android:name="com.example.cryptomarket.ui.fragments.FeedFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.feed.FeedFragment"
         android:label="FeedFragment"
         tools:layout = "@layout/fragment_feed"/>
     <fragment
         android:id="@+id/walletFragment"
-        android:name="com.example.cryptomarket.ui.fragments.WalletFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.wallet.WalletFragment"
         android:label="WalletFragment"
         tools:layout = "@layout/fragment_wallet"/>
 </navigation>
