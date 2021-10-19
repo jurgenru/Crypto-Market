@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/feedFragment2"
-        android:name="com.example.cryptomarket.ui.mainmenu.tabs.feed.FeedFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.feed.fragments.FeedFragment"
         android:label="FeedFragment"
         tools:layout = "@layout/fragment_feed">
         <action
@@ -41,7 +41,7 @@
         tools:layout = "@layout/fragment_wallet"/>
     <fragment
         android:id="@+id/coinDetailsFragment"
-        android:name="com.example.cryptomarket.ui.fragments.CoinDetailsFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.feed.fragments.CoinDetailsFragment"
         android:label="CoinDetailsFragment" >
         <argument
             android:name="coin"
@@ -49,6 +49,6 @@
     </fragment>
     <fragment
         android:id="@+id/depositFragment"
-        android:name="com.example.cryptomarket.ui.fragments.DepositFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.feed.fragments.DepositFragment"
         android:label="DepositFragment" />
 </navigation>

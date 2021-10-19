@@ -6,9 +6,6 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.cryptomarket.R
 import com.example.cryptomarket.databinding.ActivityMainMenuBinding
-import com.example.cryptomarket.replaceFragment
-import com.example.cryptomarket.ui.fragments.*
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainMenuActivity : AppCompatActivity() {
 

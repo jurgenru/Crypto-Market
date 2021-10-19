@@ -1,20 +1,15 @@
-package com.example.cryptomarket.ui.fragments
+package com.example.cryptomarket.ui.mainmenu.tabs.feed.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.cryptomarket.R
 import com.example.cryptomarket.data.FeedDataSource
 import com.example.cryptomarket.databinding.FragmentFeedBinding
-import com.example.cryptomarket.databinding.FragmentNewsBinding
-import com.example.cryptomarket.model.Post
-import com.example.cryptomarket.ui.adapters.CoinListAdapter
+import com.example.cryptomarket.ui.mainmenu.tabs.feed.CoinListAdapter
 
 
 class FeedFragment: Fragment() {
@@ -44,6 +39,8 @@ class FeedFragment: Fragment() {
             findNavController().navigate(directions)
 
         }
+
+
 
         binding.deposit
             .setOnClickListener {
