@@ -3,7 +3,7 @@ package com.example.cryptomarket.data
 import com.example.cryptomarket.model.Trend
 
 object TrendDataSource {
-    val trendList = mutableListOf(
+    private var trendList = mutableListOf(
         Trend(
             icon = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/BTC_Logo.svg/1200px-BTC_Logo.svg.png",
             name = "Bitcoin",
@@ -29,4 +29,12 @@ object TrendDataSource {
             markets = "https://i-invdn-com.investing.com/news/LYNXNPEC410B3_S.jpg"
         ),
     )
+
+    fun getTrendList(): List<Trend>{
+        return trendList
+    }
+
+    fun setTrendList(trendList: List<Trend>) {
+        this.trendList = trendList.toMutableList()
+    }
 }

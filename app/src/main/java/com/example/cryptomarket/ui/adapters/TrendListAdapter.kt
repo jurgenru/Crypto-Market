@@ -16,7 +16,7 @@ import com.example.cryptomarket.model.Trend
 class TrendListAdapter : RecyclerView.Adapter<TrendListViewHolder>() {
     val elementList: MutableList<Trend> = mutableListOf()
 
-    fun addAll(newElementList: MutableList<Trend>) {
+    fun addAll(newElementList: List<Trend>) {
         elementList.clear()
         elementList.addAll(newElementList)
         notifyDataSetChanged()
