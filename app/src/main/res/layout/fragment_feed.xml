@@ -54,7 +54,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/coinname" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/button3"
+                android:id="@+id/deposit"
                 style="@style/Widget.AppCompat.Button.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

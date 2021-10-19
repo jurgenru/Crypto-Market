@@ -26,10 +26,29 @@
         android:id="@+id/feedFragment2"
         android:name="com.example.cryptomarket.ui.fragments.FeedFragment"
         android:label="FeedFragment"
-        tools:layout = "@layout/fragment_feed"/>
+        tools:layout = "@layout/fragment_feed">
+        <action
+            android:id="@+id/actiontocoin"
+            app:destination="@id/coinDetailsFragment" />
+        <action
+            android:id="@+id/action_feedFragment2_to_depositFragment"
+            app:destination="@id/depositFragment" />
+    </fragment>
     <fragment
         android:id="@+id/walletFragment"
         android:name="com.example.cryptomarket.ui.fragments.WalletFragment"
         android:label="WalletFragment"
         tools:layout = "@layout/fragment_wallet"/>
+    <fragment
+        android:id="@+id/coinDetailsFragment"
+        android:name="com.example.cryptomarket.ui.fragments.CoinDetailsFragment"
+        android:label="CoinDetailsFragment" >
+        <argument
+            android:name="coin"
+            app:argType="com.example.cryptomarket.model.Coin" />
+    </fragment>
+    <fragment
+        android:id="@+id/depositFragment"
+        android:name="com.example.cryptomarket.ui.fragments.DepositFragment"
+        android:label="DepositFragment" />
 </navigation>
