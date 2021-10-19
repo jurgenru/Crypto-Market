@@ -3,7 +3,7 @@ package com.example.cryptomarket.data
 import com.example.cryptomarket.model.Post
 
 object NewsDataSource {
-    val postList = mutableListOf(
+    private var postList = mutableListOf(
         Post(
             publisher = "Jürgen Ruegenberg Buezo",
             time = 15,
@@ -26,4 +26,11 @@ object NewsDataSource {
             full = "Noticia Completa"
         ),
     )
+    fun getPostList(): List<Post> {
+        return postList
+    }
+
+    fun setPostList(postList: List<Post>){
+        this.postList = postList.toMutableList()
+    }
 }

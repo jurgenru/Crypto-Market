@@ -1,23 +1,23 @@
-package com.example.cryptomarket.ui.fragments
+package com.example.cryptomarket.ui.mainmenu.tabs.news.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
-import androidx.recyclerview.widget.RecyclerView
-import com.example.cryptomarket.R
-import com.example.cryptomarket.data.NewsDataSource
 import com.example.cryptomarket.databinding.FragmentNewsBinding
-import com.example.cryptomarket.databinding.ListItemNewsBinding
-import com.example.cryptomarket.ui.adapters.NewsListAdapter
+import com.example.cryptomarket.ui.mainmenu.tabs.news.NttsFragmentDirections
+import com.example.cryptomarket.ui.mainmenu.tabs.news.listadapters.NewsListAdapter
+import com.example.cryptomarket.ui.mainmenu.tabs.news.viewmodels.PostViewModel
 
 class NewsFragment: Fragment() {
     private val newsListAdapter = NewsListAdapter()
     private lateinit var binding: FragmentNewsBinding
+    private val postViewModel: PostViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,11 +36,13 @@ class NewsFragment: Fragment() {
 
         LinearSnapHelper().attachToRecyclerView(binding.rvNews)
 
-        newsListAdapter.addAll(NewsDataSource.postList)
-
         newsListAdapter.setOnNewsItemClickListener{
             val directions = NttsFragmentDirections.actionGoToNewsDetails(it)
             findNavController().navigate(directions)
+        }
+
+        postViewModel.posts.observe(viewLifecycleOwner){
+            newsListAdapter.addAll(it)
         }
     }
 }

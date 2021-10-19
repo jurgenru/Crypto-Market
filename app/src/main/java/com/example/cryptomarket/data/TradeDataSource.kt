@@ -4,7 +4,7 @@ import com.example.cryptomarket.model.Trade
 
 
 object TradeDataSource {
-    val tradeList = mutableListOf(
+    private var tradeList = mutableListOf(
         Trade(
             acronym = "BTN",
             price = 1521.0,
@@ -42,4 +42,11 @@ object TradeDataSource {
             pricePercentage = 1521.12
         )
     )
+    fun getTradeList(): List<Trade> {
+        return tradeList
+    }
+
+    fun setTradeList(tradeList: List<Trade>){
+        this.tradeList = tradeList.toMutableList()
+    }
 }

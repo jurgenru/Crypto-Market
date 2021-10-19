@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CryptoMarket">
         <activity
-            android:name=".ui.activities.NewsActivity"
+            android:name=".ui.mainmenu.tabs.news.NewsActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.activities.MainMenuActivity"
+            android:name=".ui.mainmenu.MainMenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
         </activity>
     </application>

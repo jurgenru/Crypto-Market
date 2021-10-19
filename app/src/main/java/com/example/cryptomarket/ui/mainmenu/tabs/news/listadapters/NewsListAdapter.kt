@@ -1,18 +1,12 @@
-package com.example.cryptomarket.ui.adapters
+package com.example.cryptomarket.ui.mainmenu.tabs.news.listadapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.example.cryptomarket.R
-import com.example.cryptomarket.databinding.ListItemFeedBinding
 import com.example.cryptomarket.databinding.ListItemNewsBinding
-import com.example.cryptomarket.interfaces.OnNewsItemClickListener
 import com.example.cryptomarket.model.Post
 
 class NewsListAdapter : RecyclerView.Adapter<NewsListViewHolder>() {

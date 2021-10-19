@@ -1,4 +1,4 @@
-package com.example.cryptomarket.ui.activities
+package com.example.cryptomarket.ui.mainmenu
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,22 +1,21 @@
-package com.example.cryptomarket.ui.fragments
+package com.example.cryptomarket.ui.mainmenu.tabs.news.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
-import androidx.recyclerview.widget.RecyclerView
-import com.example.cryptomarket.R
-import com.example.cryptomarket.data.TradeDataSource
 import com.example.cryptomarket.databinding.FragmentTradesBinding
-import com.example.cryptomarket.ui.adapters.TradesListAdapter
+import com.example.cryptomarket.ui.mainmenu.tabs.news.listadapters.TradesListAdapter
+import com.example.cryptomarket.ui.mainmenu.tabs.news.viewmodels.TradeViewModel
 
 class TradeFragment : Fragment() {
     private val tradeListAdapter = TradesListAdapter()
     private lateinit var binding: FragmentTradesBinding
+    private val tradeViewModel: TradeViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,6 +35,8 @@ class TradeFragment : Fragment() {
 
         LinearSnapHelper().attachToRecyclerView(binding.rvTrades)
 
-        tradeListAdapter.addAll(TradeDataSource.tradeList)
+        tradeViewModel.trades.observe(viewLifecycleOwner){
+            tradeListAdapter.addAll(it)
+        }
     }
 }

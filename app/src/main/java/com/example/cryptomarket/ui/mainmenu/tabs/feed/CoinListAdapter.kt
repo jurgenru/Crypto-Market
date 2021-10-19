@@ -1,4 +1,4 @@
-package com.example.cryptomarket.ui.adapters
+package com.example.cryptomarket.ui.mainmenu.tabs.feed
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

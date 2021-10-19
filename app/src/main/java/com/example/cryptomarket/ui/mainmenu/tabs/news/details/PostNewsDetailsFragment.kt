@@ -1,4 +1,4 @@
-package com.example.cryptomarket.ui.fragments
+package com.example.cryptomarket.ui.mainmenu.tabs.news.details
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,7 +13,6 @@ import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.cryptomarket.R
 import com.example.cryptomarket.model.Post
-import org.w3c.dom.Text
 
 class PostNewsDetailsFragment : Fragment() {
     private lateinit var news: Post
