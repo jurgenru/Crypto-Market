@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/feedFragment2"
-        android:name="com.example.cryptomarket.ui.mainmenu.tabs.feed.fragments.FeedFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.feed.FeedFragment"
         android:label="FeedFragment"
         tools:layout = "@layout/fragment_feed">
         <action

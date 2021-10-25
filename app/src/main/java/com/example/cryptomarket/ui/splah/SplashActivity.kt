@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.content.Intent
 import com.example.cryptomarket.R
+import com.example.cryptomarket.ui.login.LoginActivity
 import com.example.cryptomarket.ui.mainmenu.MainMenuActivity
 
 
@@ -17,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler().postDelayed({
-            val intent = Intent(this, MainMenuActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)

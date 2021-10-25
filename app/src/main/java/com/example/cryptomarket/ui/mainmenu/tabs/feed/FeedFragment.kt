@@ -1,4 +1,4 @@
-package com.example.cryptomarket.ui.mainmenu.tabs.feed.fragments
+package com.example.cryptomarket.ui.mainmenu.tabs.feed
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cryptomarket.data.feed.FeedDataSource
 import com.example.cryptomarket.databinding.FragmentFeedBinding
-import com.example.cryptomarket.ui.mainmenu.tabs.feed.CoinListAdapter
 
 
 class FeedFragment: Fragment() {
