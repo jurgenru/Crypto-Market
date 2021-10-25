@@ -24,7 +24,7 @@
         android:id="@+id/buttonLogin"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/icons8_bitcoin_48"
+        android:src="@drawable/icons8_bitcoin"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
