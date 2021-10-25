@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.cryptomarket.data.FeedDataSource
+import com.example.cryptomarket.data.feed.FeedDataSource
 import com.example.cryptomarket.databinding.FragmentFeedBinding
 import com.example.cryptomarket.ui.mainmenu.tabs.feed.CoinListAdapter
 

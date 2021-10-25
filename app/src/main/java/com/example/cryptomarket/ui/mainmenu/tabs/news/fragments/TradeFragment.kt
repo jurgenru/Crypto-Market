@@ -38,5 +38,7 @@ class TradeFragment : Fragment() {
         tradeViewModel.trades.observe(viewLifecycleOwner){
             tradeListAdapter.addAll(it)
         }
+
+        tradeViewModel.getAllTrades(requireContext())
     }
 }

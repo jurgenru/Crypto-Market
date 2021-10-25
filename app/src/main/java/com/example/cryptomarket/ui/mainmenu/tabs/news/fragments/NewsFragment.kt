@@ -44,5 +44,7 @@ class NewsFragment: Fragment() {
         postViewModel.posts.observe(viewLifecycleOwner){
             newsListAdapter.addAll(it)
         }
+
+        postViewModel.getAllPosts(requireContext())
     }
 }

@@ -34,5 +34,7 @@ class TrendFragment: Fragment() {
         trendViewModel.trends.observe(viewLifecycleOwner){
             trendListAdapter.addAll(it)
         }
+
+        trendViewModel.getAllTrends(requireContext())
     }
 }

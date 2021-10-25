@@ -1,4 +1,4 @@
-package com.example.cryptomarket.data
+package com.example.cryptomarket.data.feed
 
 import com.example.cryptomarket.model.Coin
 
