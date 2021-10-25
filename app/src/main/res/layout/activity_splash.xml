@@ -21,17 +21,17 @@
         app:layout_constraintRight_toRightOf="parent" />
 
     <ImageView
-        android:id="@+id/buttonLogin"
+        android:id="@+id/logoBitcoin"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginTop="150dp"
         android:src="@drawable/icons8_bitcoin"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.841"
-        tools:ignore="MissingConstraints"/>
+        tools:ignore="MissingConstraints" />
     >
 
 </androidx.constraintlayout.widget.ConstraintLayout>
