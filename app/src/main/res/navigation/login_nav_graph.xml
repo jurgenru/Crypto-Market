@@ -11,8 +11,12 @@
         android:label="LogInFragment"
         tools:layout = "@layout/frag">
         <action
-            android:id="@+id/action_logInFragment_to_main_menu_nav_graph2"
-            app:destination="@id/main_menu_nav_graph" />
+            android:id="@+id/action_logInFragment_to_mainMenuActivity"
+            app:destination="@id/mainMenuActivity" />
     </fragment>
-    <include app:graph="@navigation/main_menu_nav_graph" />
+    <activity
+        android:id="@+id/mainMenuActivity"
+        android:name="com.example.cryptomarket.ui.mainmenu.MainMenuActivity"
+        android:label="activity_main_menu"
+        tools:layout="@layout/activity_main_menu" />
 </navigation>

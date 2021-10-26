@@ -22,7 +22,7 @@ class LogInFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.btSignUpEmail.setOnClickListener {
-            val directions = LogInFragmentDirections.actionLogInFragmentToMainMenuNavGraph2()
+            val directions = LogInFragmentDirections.actionLogInFragmentToMainMenuActivity()
             findNavController().navigate(directions)
         }
     }
