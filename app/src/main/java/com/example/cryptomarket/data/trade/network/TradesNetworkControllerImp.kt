@@ -6,7 +6,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class TradesNetworkControllerImp: TradesNetworkController {
-    val client = Retrofit.Builder().baseUrl("http://192.168.0.21:1880")
+    val client = Retrofit.Builder().baseUrl("http://192.168.0.21:3000")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(TradesAPI::class.java)
