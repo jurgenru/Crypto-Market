@@ -1,4 +1,4 @@
-package com.example.cryptomarket.ui.mainmenu.tabs.wallet
+package com.example.cryptomarket.ui.mainmenu.tabs.wallet.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

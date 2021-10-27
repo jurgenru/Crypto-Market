@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/walletFragment"
-        android:name="com.example.cryptomarket.ui.mainmenu.tabs.wallet.WalletFragment"
+        android:name="com.example.cryptomarket.ui.mainmenu.tabs.wallet.fragments.WalletFragment"
         android:label="WalletFragment"
         tools:layout = "@layout/fragment_wallet"/>
     <fragment
