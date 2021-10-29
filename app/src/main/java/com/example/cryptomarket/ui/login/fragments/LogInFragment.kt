@@ -25,8 +25,14 @@ class LogInFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         firebaseAuth = FirebaseAuth.getInstance()
-        binding.btSignUpEmail.setOnClickListener {
-            anonymousAuth()
+        if(FirebaseAuth.getInstance().currentUser != null){
+            Log.v("TAG", "curentUserUid: ${FirebaseAuth.getInstance().currentUser?.uid}")
+            val directions = LogInFragmentDirections.actionLogInFragmentToMainMenuActivity()
+            findNavController().navigate(directions)
+        } else {
+            binding.btSignUpEmail.setOnClickListener {
+                anonymousAuth()
+            }
         }
     }
 
@@ -35,6 +41,7 @@ class LogInFragment: Fragment() {
             .addOnSuccessListener {
                 val directions = LogInFragmentDirections.actionLogInFragmentToMainMenuActivity()
                 findNavController().navigate(directions)
+                Log.d("TAG", "curentUserUid: ${FirebaseAuth.getInstance().currentUser?.uid}")
             }
             .addOnFailureListener {
                 Log.d("TAG", "anonymousAuth: $it")
