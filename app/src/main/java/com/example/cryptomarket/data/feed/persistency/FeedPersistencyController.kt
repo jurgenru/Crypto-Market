@@ -1,9 +1,13 @@
-package com.example.cryptomarket.data.feed
+package com.example.cryptomarket.data.feed.persistency
 
 import com.example.cryptomarket.model.Coin
 
+interface FeedPersistencyController {
+    fun getCoinsList(): List<Coin>
+    fun saveCoin(coins: List<Coin>)
 
-object FeedDataSource {
+}
+
 //    val coinList = mutableListOf(
 //        Coin(
 //            coinName = "Bitcoin",
@@ -42,10 +46,6 @@ object FeedDataSource {
 //            price = 1500.3,
 //        )
 //    )
-//
 //    fun getCoinsList():List<Coin>{
 //        return coinList;
 //    }
-
-
-}

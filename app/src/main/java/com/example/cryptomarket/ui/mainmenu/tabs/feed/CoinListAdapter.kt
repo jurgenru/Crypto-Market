@@ -18,7 +18,7 @@ class CoinListAdapter:RecyclerView.Adapter<FeedListViewHolder>()  {
     private var onFeedItemClickListener: ((coin: Coin) -> Unit)? = null
 
 
-    fun addAll(newElementList: MutableList<Coin>) {
+    fun addAll(newElementList: List<Coin>) {
         elementList.clear()
         elementList.addAll(newElementList)
         notifyDataSetChanged()

@@ -121,4 +121,69 @@ app.get('/trends', function (req, res) {
 ])
 })
 
-app.listen(3000, "192.168.0.21")
+app.get('/feed', function (req, res) {
+  res.send([{
+  "coinName":"Bitcoin",
+  "shortDescription":"BTC",
+  "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/BTC_Logo.svg/1200px-BTC_Logo.svg.png",
+  "price":1500.3
+  },
+  {
+    "coinName":"Ethereum",
+    "shortDescription":"ETH",
+    "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png",
+    "price":200.3
+    },
+    {
+    "coinName":"DOGECOIN",
+    "shortDescription":"DOGE",
+    "imageUrl":"https://www.seekpng.com/png/detail/308-3087811_dogecoin-logo-png-transparent-dogecoin.png",
+    "price":1500.3
+    },
+    {
+        "coinName":"Bitcoin",
+        "shortDescription":"BTC",
+        "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/BTC_Logo.svg/1200px-BTC_Logo.svg.png",
+        "price":1500.3
+        },
+        {
+          "coinName":"Ethereum",
+          "shortDescription":"ETH",
+          "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png",
+          "price":200.3
+          },
+          {
+              "coinName":"DOGECOIN",
+              "shortDescription":"DOGE",
+              "imageUrl":"https://www.seekpng.com/png/detail/308-3087811_dogecoin-logo-png-transparent-dogecoin.png",
+              "price":1500.3
+              }
+
+])
+})
+
+app.get('/wallet', function (req, res) {
+  res.send([
+  {"coin":{
+  "coinName":
+            "Ethereum",
+            "shortDescription":"ETH",
+            "imageUrl":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png",
+            "price":200.3
+  },"qty":3.3
+  },
+  {"coin":{
+    "coinName":
+              "DOGECOIN",
+            "shortDescription":"DOGE",
+            "imageUrl":"https://www.seekpng.com/png/detail/308-3087811_dogecoin-logo-png-transparent-dogecoin.png",
+            "price":1500.3
+    },"qty":50
+    }
+
+])
+})
+
+
+
+app.listen(3000)
