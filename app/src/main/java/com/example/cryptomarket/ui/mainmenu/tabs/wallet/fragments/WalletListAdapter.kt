@@ -17,6 +17,11 @@ class WalletListAdapter:RecyclerView.Adapter<WalletListViewHolder>(){
         notifyDataSetChanged()
     }
 
+    fun add(newElement: OwnedCoin){
+        elementList.add(newElement)
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WalletListViewHolder {
         val binding =
             ListItemWalletBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -41,11 +46,11 @@ RecyclerView.ViewHolder(binding.root) {
 
     fun bind(ownedCoin: OwnedCoin) {
         Glide.with(itemView)
-            .load(ownedCoin.coin.imageUrl)
+            .load(ownedCoin.coin.logo_url)
             .transform(CenterCrop(),RoundedCorners(24))
             .into(binding.walletlogo)
-        binding.walletname.text = ownedCoin.coin.coinName
+        binding.walletname.text = ownedCoin.coin.name
         binding.walletshort.text = "${ownedCoin.coin.price} USD"
-        binding.walletval.text = "${ownedCoin.qty} ${ownedCoin.coin.shortDescription}"
+        binding.walletval.text = "${ownedCoin.qty}"
     }
 }
